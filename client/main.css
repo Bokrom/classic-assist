@@ -1,5 +1,5 @@
 body {
-  background-color: darkred;
+  background-color: #8c1616;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -7,4 +7,9 @@ body {
 
 main {
   flex: 1 0 auto;
+}
+
+@font-face {
+  font-family: "friz_quadrata";
+  src: url("/fonts/Friz-Quadrata-Std Medium.otf") format("opentype");
 }
