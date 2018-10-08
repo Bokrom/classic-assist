@@ -1,40 +1,43 @@
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { BlazeLayout } from 'meteor/kadira:blaze-layout';
 
-// Import needed templates
-import '../../ui/layouts/body/body.js';
-import '../../ui/layouts/site/site.js';
+// Import templates
+import '../../ui/layouts/app/app.js';
 
+// Import pages
 import '../../ui/pages/home/home.js';
 import '../../ui/pages/not-found/not-found.js';
-import '../../ui/pages/body1/body1.js';
-import '../../ui/pages/body2/body2.js';
+import '../../ui/pages/search/search.js';
+import '../../ui/pages/talents/talents.js';
 
 
-// Set up all routes in the app
+//==ROUTE NOT FOUND==//
 FlowRouter.notFound = {
   action() {
-    BlazeLayout.render('App_body', { main: 'App_notFound' });
+    BlazeLayout.render('App_layout', { App_main: 'App_notFound' });
   },
 };
 
+//==HOME==//
 FlowRouter.route('/', {
   name: 'App.home',
   action() {
-    BlazeLayout.render('App_body', { main: 'App_home' });
+    BlazeLayout.render('App_layout', { App_main: 'App_home' });
   },
 });
 
-FlowRouter.route('/body1', {
-  name: 'body1',
+//==SEARCH==//
+FlowRouter.route('/search', {
+  name: 'App.search',
   action() {
-    BlazeLayout.render('siteLayout', { siteMain: 'body1' })
+    BlazeLayout.render('App_layout', { App_main: 'App_search' })
   },
 });
 
-FlowRouter.route('/body2', {
-  name: 'body2',
+//==TALENTS==//
+FlowRouter.route('/talents', {
+  name: 'App.talents',
   action() {
-    BlazeLayout.render('siteLayout', { siteMain: 'body2' })
+    BlazeLayout.render('App_layout', { App_main: 'App_talents' })
   },
 });
