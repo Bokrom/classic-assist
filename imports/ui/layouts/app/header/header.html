@@ -1,7 +1,17 @@
 <template name="App_header">
-  <nav>
-    <div class="grey darken-4 nav-wrapper">
-      <a href="{{pathFor route='App.home'}}" class="brand-logo">Classic Assistant</a>
+  <nav class="grey darken-4 nav-extended">
+    <div class="nav-wrapper">
+      <a id="title-link" href="{{pathFor route='App.home'}}" class="brand-logo">Classic Assistant</a>
+      <ul id="top-right-menu" class="right">
+          <li><a href="#!"><i class="small material-icons right">account-box</i>Some sick text</a></li>
+          <li><a href="#!"><i class="small material-icons right">account-circle</i>More dank shit</a></li>
+      </ul>
+    </div>
+    <div class="nav-content">
+      <ul class="tabs tabs-transparent">
+        <li class="tab"><a href="{{pathFor route='App.search'}}">Gear Search</a></li>
+        <li class="tab"><a href="{{pathFor route='App.talents'}}">Talent Calculator</a></li>
+      </ul>
     </div>
   </nav>
 </template>

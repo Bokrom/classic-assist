@@ -6,7 +6,7 @@
 
 /*== BODY ==*/
 body {
-  background-color: #580c0c;
+  background-color: #0b2253;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -17,8 +17,8 @@ main {
   flex: 1 0 auto;
 }
 
-/*== NAV HEADER ==*/
-nav .brand-logo {
+/*== TITLE ==*/
+#title-link {
   font-size: 2.8rem;
   font-style: italic;
   font-weight: 300;
@@ -26,11 +26,3 @@ nav .brand-logo {
 }
 
 /*== NAV FOOTER ==*/
-ul.nav-mobile {
-  width: 20%;
-  text-align: center;
-}
-
-ul.nav-mobile li {
-  display: inline;
-}
