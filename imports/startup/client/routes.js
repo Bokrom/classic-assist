@@ -1,7 +1,7 @@
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { BlazeLayout } from 'meteor/kadira:blaze-layout';
 
-// Import templates
+// Import templates and layouts
 import '../../ui/layouts/app/app.js';
 
 // Import pages
@@ -10,6 +10,8 @@ import '../../ui/pages/not-found/not-found.js';
 import '../../ui/pages/search/search.js';
 import '../../ui/pages/talents/talents.js';
 
+// Set BlazeLayout to render to body of page
+BlazeLayout.setRoot('body');
 
 //==ROUTE NOT FOUND==//
 FlowRouter.notFound = {

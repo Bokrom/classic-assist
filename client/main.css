@@ -1,9 +1,3 @@
-/*== CUSTOM FONTS ==*/
-@font-face {
-  font-family: "friz_quadrata";
-  src: url("/fonts/Friz-Quadrata-Std Medium.otf") format("opentype");
-}
-
 /*== BODY ==*/
 body {
   background-color: #0b2253;
